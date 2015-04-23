@@ -3,11 +3,10 @@
  * @desc Open and control the MongoDB connection.
  * @use connect() disconnect()
  */
-
 var mongoose = require('mongoose'),
   uri = 'mongodb://localhost:27017/awesomeapp';
 
-var connect = function(debug, database) {
+var connect = function(debug) {
     debug = typeof debug === 'undefined' ? false : true;
 
     mongoose.connect(uri);

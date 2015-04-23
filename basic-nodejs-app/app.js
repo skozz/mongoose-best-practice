@@ -4,28 +4,26 @@
  * @require /model/*
  **/
 
-var _ = require('lodash'),
-  mongoose = require("mongoose"),
+var mongoose = require("mongoose"),
   express = require("express"),
   cors = require("cors");
 
 var app = express(),
-  db = require(__dirname + '/model/db'),
-  Post = require(__dirname + '/model/post').Post;
+  db = require(__dirname + '/models/db'),
+  Post = require(__dirname + '/models/post').Post;
 
 db.connect('debug');
 
 app.use(cors());
-
 app.get('/posts', function(req, res) {
 
-  // Render the last 50 posts
+  // Render the last 10 posts
   Post.find(function(err, posts) {
-    console.log(posts);
     res.send(posts);
-  }).limit(50);
+  }).limit(10);
 
 });
+
 
 app.get('/post/new', function(req, res) {
 
