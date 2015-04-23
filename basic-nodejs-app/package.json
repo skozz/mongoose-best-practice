@@ -1,0 +1,14 @@
+{
+  "name": "MongooseBestPractice",
+  "description": "Example of mongoose managment",
+  "version": "0.0.1",
+  "main": "app.js",
+  "author": "Angel R. Molina (skozz) <angelrmolina@gmail.com>",
+  "dependencies": {
+    "cors": "^2.5.3",
+    "express": "^4.12.3",
+    "lodash": "^3.6.0",
+    "mongoose": "^4.0.1",
+    "request": "^2.55.0"
+  }
+}
