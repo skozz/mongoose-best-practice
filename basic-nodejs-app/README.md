@@ -1,5 +1,6 @@
 #### Steps: 
 - Clone this repository
+- `cd basic-nodejs-app`
 - `npm install`
 - `node app.js`
 
